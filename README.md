@@ -27,3 +27,5 @@
 * Nivel 3
 
 ![image](https://user-images.githubusercontent.com/87247824/206735109-80f57b6d-daf9-4cc9-a43f-603adeec8a93.png)
+
+`Debug serve para zerar o dinheiro, caso vc bugue ele.`
