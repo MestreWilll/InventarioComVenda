@@ -1,3 +1,3 @@
-# Loja-Dinamica-2.0
+# Inventario
 -----------------
-* Teste 1
+* Teste 2
