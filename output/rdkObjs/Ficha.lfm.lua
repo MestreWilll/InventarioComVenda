@@ -95,6 +95,7 @@ local function constructNew_frmLojinha()
     obj.troca:setWidth(63);
     obj.troca:setHeight(60);
     obj.troca:setName("troca");
+    obj.troca:setVisible(false);
     obj.troca:setSRC("/Imagens/vender_on.png");
 
     obj.layout1 = GUI.fromHandle(_obj_newObject("layout"));
@@ -235,6 +236,7 @@ local function constructNew_frmLojinha()
     obj.botaoDeVenda = GUI.fromHandle(_obj_newObject("image"));
     obj.botaoDeVenda:setParent(obj.boxDetalhesDoItem);
     obj.botaoDeVenda:setName("botaoDeVenda");
+    obj.botaoDeVenda:setVisible(false);
     obj.botaoDeVenda:setSRC("/Imagens/vendeItem2.png");
     obj.botaoDeVenda:setLeft(237);
     obj.botaoDeVenda:setTop(209);

@@ -42,7 +42,7 @@ end;
 
 
 
-    <image hitTest="true" cursor="handPoint" left="537" top="-2" width="63" height="60" name="troca" src="/Imagens/vender_on.png">
+    <image hitTest="true" cursor="handPoint" left="537" top="-2" width="63" height="60" name="troca" visible="false" src="/Imagens/vender_on.png">
         <event name="onMouseEnter">   
                               self.troca.src = "/Imagens/vender_off.png"
 		</event>
@@ -195,7 +195,7 @@ left="180" top="364" width="205" height="30" visible="true"/>
         </event>
          </button>    
 
-   <image name="botaoDeVenda" src="/Imagens/vendeItem2.png" 
+   <image name="botaoDeVenda" visible="false" src="/Imagens/vendeItem2.png" 
      left="237" top="209" width="96" opacity="1"
       height="21" hitTest="true" cursor="handPoint">
 
