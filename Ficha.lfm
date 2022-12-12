@@ -2,6 +2,6 @@
 <form name="frmLojinha" formType="sheetTemplate" dataType="LojaDinamica" title="Loja Dinamica" align="client">
   
     
-            <import file="1.lfm"/>
+            <import file="Inventario.lfm"/>
  
 </form>

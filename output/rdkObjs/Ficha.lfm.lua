@@ -32,13 +32,13 @@ local function constructNew_frmLojinha()
     obj:setTitle("Loja Dinamica");
     obj:setAlign("client");
 
-    obj.frmDesbravadores23_svg = GUI.fromHandle(_obj_newObject("form"));
-    obj.frmDesbravadores23_svg:setParent(obj);
-    obj.frmDesbravadores23_svg:setName("frmDesbravadores23_svg");
-    obj.frmDesbravadores23_svg:setAlign("client");
+    obj.frminventario = GUI.fromHandle(_obj_newObject("form"));
+    obj.frminventario:setParent(obj);
+    obj.frminventario:setName("frminventario");
+    obj.frminventario:setAlign("client");
 
     obj.Pag2 = GUI.fromHandle(_obj_newObject("layout"));
-    obj.Pag2:setParent(obj.frmDesbravadores23_svg);
+    obj.Pag2:setParent(obj.frminventario);
     obj.Pag2:setName("Pag2");
     obj.Pag2:setAlign("client");
     obj.Pag2:setVisible(true);
@@ -60,19 +60,19 @@ local function constructNew_frmLojinha()
     obj.rectangle1:setCornerType("round");
     obj.rectangle1:setName("rectangle1");
 
-    obj.labSoma3 = GUI.fromHandle(_obj_newObject("label"));
-    obj.labSoma3:setParent(obj.rectangle1);
-    obj.labSoma3:setFontSize(28);
-    obj.labSoma3:setFontColor("lime");
-    lfm_setPropAsString(obj.labSoma3, "fontStyle",  "bold");
-    obj.labSoma3:setLeft(346);
-    obj.labSoma3:setTop(0);
-    obj.labSoma3:setWidth(205);
-    obj.labSoma3:setHeight(45);
-    obj.labSoma3:setName("labSoma3");
+    obj.labSoma = GUI.fromHandle(_obj_newObject("label"));
+    obj.labSoma:setParent(obj.rectangle1);
+    obj.labSoma:setFontSize(28);
+    obj.labSoma:setFontColor("lime");
+    lfm_setPropAsString(obj.labSoma, "fontStyle",  "bold");
+    obj.labSoma:setLeft(346);
+    obj.labSoma:setTop(0);
+    obj.labSoma:setWidth(205);
+    obj.labSoma:setHeight(45);
+    obj.labSoma:setName("labSoma");
 
     obj.dataLink1 = GUI.fromHandle(_obj_newObject("dataLink"));
-    obj.dataLink1:setParent(obj.labSoma3);
+    obj.dataLink1:setParent(obj.labSoma);
     obj.dataLink1:setField("Soma");
     obj.dataLink1:setName("dataLink1");
 
@@ -373,7 +373,7 @@ local function constructNew_frmLojinha()
             		.. "" .. string.sub(string.format("%.0f", v - math.floor(v)), 3) 
             
             end;
-            	  self.labSoma3.text = '$' .. format_thousand(sheet.soma);
+            	  self.labSoma.text = '$' .. format_thousand(sheet.soma);
         end, obj);
 
     obj._e_event1 = obj.image1:addEventListener("onClick",
@@ -518,6 +518,7 @@ local function constructNew_frmLojinha()
           self:setNodeDatabase(nil);
         end;
 
+        if self.frminventario ~= nil then self.frminventario:destroy(); self.frminventario = nil; end;
         if self.button1 ~= nil then self.button1:destroy(); self.button1 = nil; end;
         if self.testeee ~= nil then self.testeee:destroy(); self.testeee = nil; end;
         if self.label1 ~= nil then self.label1:destroy(); self.label1 = nil; end;
@@ -531,14 +532,14 @@ local function constructNew_frmLojinha()
         if self.naoVende ~= nil then self.naoVende:destroy(); self.naoVende = nil; end;
         if self.layout5 ~= nil then self.layout5:destroy(); self.layout5 = nil; end;
         if self.Pag2 ~= nil then self.Pag2:destroy(); self.Pag2 = nil; end;
-        if self.labSoma3 ~= nil then self.labSoma3:destroy(); self.labSoma3 = nil; end;
         if self.dataLink1 ~= nil then self.dataLink1:destroy(); self.dataLink1 = nil; end;
         if self.label2 ~= nil then self.label2:destroy(); self.label2 = nil; end;
+        if self.labSoma ~= nil then self.labSoma:destroy(); self.labSoma = nil; end;
         if self.troca ~= nil then self.troca:destroy(); self.troca = nil; end;
         if self.botaoDeVenda ~= nil then self.botaoDeVenda:destroy(); self.botaoDeVenda = nil; end;
-        if self.layout6 ~= nil then self.layout6:destroy(); self.layout6 = nil; end;
         if self.boxDetalhesDoItem ~= nil then self.boxDetalhesDoItem:destroy(); self.boxDetalhesDoItem = nil; end;
         if self.Venda ~= nil then self.Venda:destroy(); self.Venda = nil; end;
+        if self.layout6 ~= nil then self.layout6:destroy(); self.layout6 = nil; end;
         if self.rectangle2 ~= nil then self.rectangle2:destroy(); self.rectangle2 = nil; end;
         if self.dinheiro ~= nil then self.dinheiro:destroy(); self.dinheiro = nil; end;
         if self.image4 ~= nil then self.image4:destroy(); self.image4 = nil; end;
@@ -550,11 +551,10 @@ local function constructNew_frmLojinha()
         if self.edit2 ~= nil then self.edit2:destroy(); self.edit2 = nil; end;
         if self.layout1 ~= nil then self.layout1:destroy(); self.layout1 = nil; end;
         if self.scrollBox1 ~= nil then self.scrollBox1:destroy(); self.scrollBox1 = nil; end;
-        if self.frmDesbravadores23_svg ~= nil then self.frmDesbravadores23_svg:destroy(); self.frmDesbravadores23_svg = nil; end;
         if self.rectangle1 ~= nil then self.rectangle1:destroy(); self.rectangle1 = nil; end;
         if self.layout2 ~= nil then self.layout2:destroy(); self.layout2 = nil; end;
-        if self.rclListaDosItens ~= nil then self.rclListaDosItens:destroy(); self.rclListaDosItens = nil; end;
         if self.edit1 ~= nil then self.edit1:destroy(); self.edit1 = nil; end;
+        if self.rclListaDosItens ~= nil then self.rclListaDosItens:destroy(); self.rclListaDosItens = nil; end;
         if self.DragaoDeArmadura ~= nil then self.DragaoDeArmadura:destroy(); self.DragaoDeArmadura = nil; end;
         self:_oldLFMDestroy();
     end;
